@@ -69,3 +69,55 @@
     transform: scale(1.05);
     transition: 0.4s;
 }
+@media (max-width: 768px) {
+    .services {
+        gap: 40px;
+        margin: 25px 30px;
+        align-items: start;
+    }
+    
+    .services-title h1 {
+        font-size: 25px;
+        padding: 0;
+    }
+    
+    .services-title img {
+        width: 60px;
+        right: -10px;
+    }
+    
+    /* Change grid to 2 columns on small screens */
+    .services-container {
+        grid-template-columns: 1fr 1fr; /* 2 columns instead of 1 */
+        gap: 20px;
+    }
+    
+    .services-format {
+        padding: 20px;
+    }
+    
+    .services-format h3 {
+        font-size: 18px;
+    }
+    
+    .services-format h2 {
+        font-size: 24px;
+    }
+    
+    .services-format p {
+        font-size: 16px;
+        line-height: 22px;
+        max-width: 100%; /* Allow text to take full width */
+    }
+    
+    .services-readmore {
+        gap: 15px;
+    }
+}
+
+/* For very small screens (below 480px) - switch to 1 column */
+@media (max-width: 480px) {
+    .services-container {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}

@@ -102,7 +102,63 @@
     transition: 0.5s;
 
 }
+.about-achievements hr {
+ border: none;
+    width: 2px; 
+    height: 50px; 
+    background: white;
+    margin: 0 10px; /* Spacing around the line */
+}
 .about-achievement:hover{
     transform: scale(1.12);
     transition: 0.5s;
+}
+@media (max-width:768px){
+    .about{
+        gap: 40px;
+        margin: 25px 30px;
+        align-items: start;
+    }
+    .about-title h1{
+        font-size:  25px;
+        padding: 0;
+    }
+    .about-title img{
+        width: 60px;
+        right: -10px;
+    }
+    .about-sections{
+        flex-direction: column;
+    }
+    .about-left{
+        display: none;
+    }
+    .about-para{
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .about-skill{
+        gap: 8px;
+        align-items: center;
+    }
+    .about-skill p{
+        font-size: 13px;
+    }
+    .about-skill hr{
+        height: 5px;
+    }
+    .about-achievements{
+        justify-content: space-between;
+    }
+    .about-achievement{
+        gap: 7px;
+    }
+    .about-achievement h1{
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .about-achievement p{
+        text-align: center;
+        font-size: 11px;
+    }
 }
