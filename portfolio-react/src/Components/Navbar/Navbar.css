@@ -49,16 +49,18 @@
     width: 100%;
     height: 100%;
 }
-
-/* Mobile Menu Styles */
 .nav-mob-open {
-    display: none;
+        display: none !important; /* Hidden by default */
     cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
     width: 30px;
+    z-index: -11;
 }
 
 .nav-mob-close {
-    display: none;
+    display: none; /* Hidden by default */
     cursor: pointer;
     position: absolute;
     top: 30px;
@@ -66,9 +68,7 @@
     width: 30px;
     z-index: 11;
 }
-.nav-mob-open{
-    display: none;
-}
+
 @media(max-width: 768px) {
     .navbar {
         margin: 20px 30px;

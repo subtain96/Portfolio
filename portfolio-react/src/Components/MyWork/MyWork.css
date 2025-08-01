@@ -63,31 +63,32 @@
 }
 @media (max-width: 768px) {
     .mywork {
-        gap: 40px;
-        margin: 25px 30px;
-        align-items: start;
+        gap: 30px;
+        margin: 20px;
+        align-items: center;
     }
     
     .mywork-title h1 {
-        font-size: 25px;
+        font-size: 28px;
         padding: 0;
     }
     
     .mywork-title img {
-        width: 60px;
-        right: -10px;
+        width: 80px;
+        right: -15px;
     }
     
     /* 2 columns on tablets */
     .mywork-container {
         grid-template-columns: 1fr 1fr;
-        gap: 25px;
+        gap: 20px;
+        width: 100%;
     }
     
     .mywork-container img {
-        width: 100%; /* Make images responsive to container */
-        height: auto; /* Maintain aspect ratio */
-        max-width: 100%; /* Prevent overflow */
+        width: 100%;
+        height: 150px;
+        max-width: 100%;
     }
     
     .mywork-showmore {
@@ -96,19 +97,47 @@
     }
 }
 
-/* Very small screens (≤ 480px) */
+/* Mobile (480px and below) - KEEP 2 COLUMNS */
 @media (max-width: 480px) {
-    /* 1 column on very small screens */
-    .mywork-container {
-        grid-template-columns: 1fr;
+    .mywork {
+        gap: 20px;
+        margin: 15px;
     }
     
     .mywork-title h1 {
-        font-size: 22px;
+        font-size: 24px;
+    }
+    
+    /* Maintain 2 columns on mobile */
+    .mywork-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px; /* Reduced gap for small screens */
+    }
+    
+    .mywork-container img {
+        height: 120px; /* Slightly shorter to fit two columns */
+        width: 100%;
+        min-width: 0; /* Ensure items can shrink */
     }
     
     .mywork-showmore {
         padding: 12px 24px;
         font-size: 16px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Extra small devices (optional, for very narrow screens) */
+@media (max-width: 360px) {
+    .mywork-container {
+        gap: 8px;
+    }
+    
+    .mywork-container img {
+        height: 100px;
+    }
+    
+    .mywork-title h1 {
+        font-size: 22px;
     }
 }
